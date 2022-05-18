@@ -1,0 +1,47 @@
+body {
+    margin:0;
+}
+
+main{
+    display:flex;
+    height: 100vh;
+}
+
+.beauty-container{
+    background-color: green;
+    position: relative;
+    width: clamp(30%,35%,40%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.beauty-container::before{
+    content:"";
+    background-image: url("./media/background.jpg");
+    background-repeat: no-repeat;
+    position: absolute;
+    height:100%;
+    width:100%;
+    box-shadow: inset -5px 0 30px rgba(0, 0, 0, 0.7);
+
+}
+
+.logo-container {
+    display:grid;
+    position: relative;
+    place-items: center;
+    top:-5%;
+    background-color: rgba(0, 0, 0, 0.75);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.75);
+    height: 20%;
+}
+
+.logo{
+    height:70%;
+    width:70%;
+    background: url("./media/logo.png") 0 0 no-repeat;
+    background-size: clamp(80px,50%,110px);
+    background-position: center;
+}
