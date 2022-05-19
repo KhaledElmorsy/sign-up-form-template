@@ -1,4 +1,6 @@
 const password = document.querySelector('input[name="password"]');
+const confirmPass = document.querySelector('[name="password-confirm"]')
+
 {
     const meter = document.querySelector('meter');
     const passwordStrength = document.querySelector('.strength')
@@ -25,4 +27,20 @@ const password = document.querySelector('input[name="password"]');
     }
 }
 
+
+{
+    const confirmMessage = document.querySelector('p.confirm');
+    var timer;
+
+    function confirmPassCheck(e) {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+            if (confirmPass.value != password.value) {
+                confirmMessage.classList.add("invalid");
+            } else confirmMessage.classList.remove("invalid");
+        }, 1000)
+    }
+}
+
 password.addEventListener('input', updateMeter)
+confirmPass.addEventListener('input', confirmPassCheck)
