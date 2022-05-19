@@ -1,5 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@1,200;1,300;1,400&display=swap');
+
+:root {
+    --accent-color: rgb(50, 141, 226);
+}
+
 body {
     margin:0;
+}
+
+main *{
+    box-sizing: border-box;
+    display:flex;
+    font-family: Helvetica;
 }
 
 main{
@@ -10,7 +22,8 @@ main{
 .beauty-container{
     background-color: green;
     position: relative;
-    width: clamp(30%,35%,40%);
+    width: 40vw;
+    flex: 1 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,6 +55,172 @@ main{
     height:70%;
     width:70%;
     background: url("./media/logo.png") 0 0 no-repeat;
-    background-size: clamp(80px,50%,110px);
+    background-size: auto clamp(80%,10vw,100%);
     background-position: center;
+}
+
+.main-container{
+    display:flex;
+    flex-direction: column;
+    width: 60vw;
+    --left-padding: 7%;
+
+}
+
+.header-container{
+    height: 35%;
+    background-color: rgb(249, 254, 255);
+    align-items: center;
+    flex:0 1 auto;
+    padding-left: var(--left-padding);
+    padding-right: 20px;
+    
+}
+
+header {
+    font-family: helvetica, Mali,sans-serif;
+    font-weight: 300;
+    font-size: clamp(1.2em,2.8vw,1.4em);
+    color:rgb(0, 93, 165);
+ 
+}
+
+form {
+    flex-direction: column;
+    align-items: flex-start;
+    flex:1;
+    height:auto;
+    background-color: white;
+    
+
+}
+
+h2 {
+    color: var(--accent-color);
+    padding-left: var(--left-padding);
+    line-height: 20px;
+}
+
+.mid-form{
+    width:100%;
+    flex-direction: column;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+fieldset {
+    border: none;
+    display: grid;
+    width:auto;
+    height:60%;
+    grid-template-columns: repeat(2,230px);
+    gap:15px 10%;
+    padding-left: var(--left-padding);
+    padding-right: 20px;
+    padding-bottom: 40px;
+}
+
+.form-item{
+    flex-direction: column;
+    width: 200px;
+}
+
+
+label {
+    font-size: 0.9em;
+    font-weight: 600;
+    line-height: 2em;;
+    color:rgb(27, 96, 176)
+}
+
+input {
+    position:relative;
+    display:grid;
+    border-radius: 5px;
+    width: 200px;
+    height:30px;
+    padding-left:5px;
+    outline:none;
+    border: 1px solid black;
+    transition: 90ms ease-in-out;
+}
+
+input:focus{
+    border:1.5px var(--accent-color) solid;
+    outline:none;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+}
+
+input:required{
+    border: 1.5px rgb(8, 11, 8) solid;
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+}
+
+input:invalid:not(:placeholder-shown){
+    position:relative;
+    border: 1px red solid;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+}
+
+input ~ p {
+    display:none;
+    position: relative;
+    margin-top:4px;
+    padding-left: 4px;
+    color: red;
+    height:auto;
+    font-size: 12px;
+    line-height: 12px;
+    margin-bottom: -13px;
+}
+
+input:invalid:not(:placeholder-shown) ~ p{
+    display: block;
+}
+
+meter{
+    width:200px;
+    margin-top: 3px;
+    margin-bottom: -5px;
+}
+
+p.password {
+    color:grey;
+}
+
+footer{
+    padding-top: 20px;
+    padding-left: var(--left-padding);
+    padding-right: 20px;
+    flex:1 0 auto;
+    width:100%;
+    flex-direction: column;
+    background-color: rgb(5, 145, 215);
+}
+button {
+    font-size: 1.1em;
+    font-weight: 700;
+    display: block;
+    border: white solid 2px;
+    position: relative;
+    width:170px;
+    height: 35px;
+    border-radius: 10px;
+    color: white;
+    transition-duration: 100ms;
+    background-color:rgb(0, 146, 243);
+}
+
+button:hover{
+    background-color:hsl(204, 100%, 31%);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+footer > p {
+    color: white;
+}
+
+footer > p > a{
+    text-decoration: none;
+    font-weight: 700;
+    color:hsl(204, 100%, 16%);
 }
