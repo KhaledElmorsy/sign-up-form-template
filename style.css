@@ -180,11 +180,16 @@ input:invalid:not(:placeholder-shown) ~ p{
 meter{
     width:200px;
     margin-top: 3px;
-    margin-bottom: -5px;
 }
 
-p.password {
-    color:grey;
+.password {
+    display:flex;
+    color:rgb(125, 125, 125);
+    font-size: 0.9em;
+}
+
+.strength {
+    font-weight: 700;
 }
 
 footer{
