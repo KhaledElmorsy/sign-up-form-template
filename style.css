@@ -177,6 +177,10 @@ input:invalid:not(:placeholder-shown) ~ p{
     display: block;
 }
 
+p.confirm.invalid{
+    display: block;
+}
+
 meter{
     width:200px;
     margin-top: 3px;
