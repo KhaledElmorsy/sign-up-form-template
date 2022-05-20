@@ -231,5 +231,9 @@ footer > p {
 footer > p > a{
     text-decoration: none;
     font-weight: 700;
-    color:hsl(204, 100%, 16%);
+    color:hsl(214, 100%, 26%);
+}
+
+footer > p > a:hover{
+    color: white;
 }
